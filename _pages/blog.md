@@ -1,6 +1,6 @@
 ---
 layout: page
-title: blog
+title: accepted posts
 permalink: /blog/
 nav: true
 nav_order: 2
@@ -31,7 +31,7 @@ pagination:
         <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </h3>
       <p class="post-meta">{% if post.authors %}{% for author in post.authors %}{{ author.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}</p>
-      <p class="post-description">{{ post.description }}</p>
+      <p class="post-description">{{ post.description | truncate: 180 }}</p>
     </li>
   {% endfor %}
 </ul>
